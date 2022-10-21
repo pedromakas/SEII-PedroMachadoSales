@@ -1,0 +1,33 @@
+a)
+Preprocessing:
+
+Preprocessing é o primeiro passo. O pré-processador obedece a comandos que começam com # (conhecidos como diretivas) ao:
+
+remover comentários
+expandir macros
+expandir arquivos incluídos
+Se você incluiu um arquivo de cabeçalho como #include <stdio.h>, ele procurará o arquivo stdio.h e copiará o arquivo de cabeçalho no arquivo de código-fonte.
+
+O pré-processador também gera código de macro e substitui constantes simbólicas definidas usando #define por seus valores.
+
+Compiling:
+
+Compilar é o segundo passo. Ele pega a saída do pré-processador e gera a linguagem assembly, uma linguagem intermediária legível por humanos, específica para o processador de destino.
+
+Assembly:
+
+A montagem é a terceira etapa da compilação. O montador converterá o código assembly em código binário puro ou código de máquina (zeros e uns). Este código também é conhecido como código objeto.
+
+Linking:
+
+Linking é a etapa final da compilação. O vinculador mescla todo o código objeto de vários módulos em um único. Se estivermos usando uma função de bibliotecas, o vinculador vinculará nosso código a esse código de função de biblioteca.
+
+Na vinculação estática, o vinculador faz uma cópia de todas as funções de biblioteca usadas no arquivo executável. Na vinculação dinâmica, o código não é copiado, é feito apenas colocando o nome da biblioteca no arquivo binário.
+
+b)
+I)A opção -static vincula um programa estaticamente, em outras palavras, não requer uma dependência de bibliotecas dinâmicas em tempo de execução para ser executado.
+II)Gera informações de depuração a serem usadas pelo depurador GDB.
+III)Adicionar -pedantic desativa mais extensões e gera mais avisos.
+IV)Habilita todas as mensagens de aviso do compilador. Esta opção deve ser sempre utilizada, a fim de gerar um código melhor.
+V)Instrui o GCC a "otimizar para tamanho". Ele permite todas as otimizações -O2 que não aumentam o tamanho do executável e, em seguida, também alterna alguns sinalizadores de otimização para reduzir ainda mais o tamanho do executável.
+VI)Tenta otimizar o código muito fortemente para o desempenho. Inclui todas as otimizações que -O2 inclui, além de mais algumas.
